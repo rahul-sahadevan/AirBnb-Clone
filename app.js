@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     searchVal:searchInput.value
                 }
                 localStorage.setItem("obj",JSON.stringify(obj));
-                window.location.href = "/listing.html"
+                window.location.href = "listing.html"
             } 
             catch (error) {
                 console.error(error);
