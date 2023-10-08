@@ -29,7 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     searchVal:searchInput.value
                 }
                 localStorage.setItem("obj",JSON.stringify(obj));
-                window.location.href = "http://127.0.0.1:5500/listing.html"
+                const a = document.createElement("a");
+                a.href = "http://127.0.0.1:5500/listing.html"
+                a.target = "_blank";
+                window.location = a;
             } 
             catch (error) {
                 console.error(error);

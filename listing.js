@@ -119,14 +119,15 @@ function addModal(list,element){
             <button class="ok-button" onclick = "closeModal()">OK</button>
             <button class="profile-button" onclick = "myProfile()">Profile</button>
         </div>
-        `
-        
+        `    
     })
     
 }
 function myProfile(){
-
-    window.location.href = "http://127.0.0.1:5500/house.html"
+    const a = document.createElement("a");
+    a.href = "http://127.0.0.1:5500/house.html"
+    a.target = "_blank";
+    window.location = a;
 }
 function addtionalFess(element){  
     return element.price.priceItems[1].amount + element.price.priceItems[2].amount;
