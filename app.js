@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             try {
                 const response = await fetch(url,options);
                 const result = await response.json();
-                // totalStay.innerText = result.results.length +" Stays in"+searchInput.value;
+                
                 console.log(result.results);
                 const arr = result.results;
                 let obj = {

@@ -509,7 +509,7 @@ nav.navbar-white .fa-bars{
 
 /* ----------house-details page------------- */
 .house-details{
-    padding: 0 12%;
+    padding: 0 5%;
 }
 .house-title{
     margin-top: 50px;
@@ -531,18 +531,41 @@ nav.navbar-white .fa-bars{
     font-size: 14px;
 }
 .gallery{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-areas: 'first first . .' 'first first . .';
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 10px;
     margin: 20px 0;
+    height: 400px;
 }
-.gallery div img{
+.g1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    height: 100%;
+}
+.g2,.g3{
+    display: flex;
+    gap: 10px;
     width: 100%;
-    display: block;
-    border-radius: 10px;
+    height: 49%;
 }
+.g2 div,.g3 div{
+    width: 49%;
+}
+.g2 div img,.g3 div img{
+    display: block;
+    border-radius: 10px;  
+    width: 100%;
+    height: 100%;
+}
+
 .gallery-img-1{
-    grid-area: first;
+    width: 50%;
+}
+.A img{
+    height: 100%;
+    width: 100%;
 }
 .small-details h2{
     font-weight: 500;
@@ -661,6 +684,18 @@ nav.navbar-white .fa-bars{
     border: 1px solid #ff5361;
     border-radius: 8px;
 }
+.rooms{
+    display: flex;
+}
+.room-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 25px;
+}
+.stay-rating{
+    font-weight: bold;
+}
 /* -----media query for house details page---------- */
 @media only screen and (max-width: 700px){
     .house-details{
@@ -715,6 +750,7 @@ nav.navbar-white .fa-bars{
     background-color: white;
     width: 100%;
     padding:24px 24px 16px 24px;
+    z-index: 10;
     
 }
 .nav-bar{
@@ -830,7 +866,7 @@ nav.navbar-white .fa-bars{
 .hotel-list-map{
     display: flex;
     position: relative;
-    z-index: -5;
+    /* z-index: -5; */
     /* display: none; */
 }
 .hotel-lists{
@@ -951,8 +987,21 @@ nav.navbar-white .fa-bars{
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     line-height: 25px;
-    backdrop-filter: blur(5px);
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     display: none;
+}
+.profile-button{
+    border: none;
+    width: 100px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #FF5361;
+}
+.ok-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .ok-button{
     border: none;
