@@ -54,7 +54,7 @@ function createListingCard(element){
 
             <div class="pic-heart">
                 <img src="${element.images[0]}" alt="" class="hotel-img">
-                <img class="heart" src="./images/heart.png" alt="">
+                <img class="heart" onclick="addRed" src="./images/heart.png" alt="">
 
             </div>
             <div class="name-head-rating">
@@ -75,6 +75,14 @@ function createListingCard(element){
     hotelLists.append(listCard);
 
 }
+
+function addRed(event){
+    const btn = event.target;
+    console.log(btn)
+
+}
+
+
 
 function distaceCalculator(lat1, lon1, lat2, lon2) {
     console.log(lat1)
@@ -145,15 +153,44 @@ function initMap() {
     });
 
     for(let i =1;i<array.length;i++){
-        addMarker({lat:array[i].lat,lng:array[i].lng})
+        const m = `₹${array[i].price.total * 83}`
+        const customMarker = document.createElement('div');
+        customMarker.className = 'custom-marker';
+        customMarker.innerHTML = `${m}`;
+        addMarker({lat:array[i].lat,lng:array[i].lng},customMarker,m)
     }
 
 
-    function addMarker(coords){
+    function addMarker(coords,customMarker,m){
         var marker = new google.maps.Marker({
             position:coords,
             map:map,
+            icon: {
+                // Create a custom div element with your desired content
+                path: 'M 0,0 L 30,0 L 30,30 L 0,30 Z',
+                fillColor: 'white',
+                fillOpacity: 1,
+                strokeWeight: 1,
+                scale: new google.maps.Size(3, 2),
+                anchor: new google.maps.Point(15, 15),
+                labelOrigin: new google.maps.Point(15, 15),
+            },
+            label: {
+                text: `${m}`, // You can replace 'A' with any content you want
+                color: 'white',
+                fontSize: '16px',
+                fontWeight: 'bold',   
+            },
         })
+        const infoWindow = new google.maps.InfoWindow({
+            content:customMarker
+        });
+        
+        
+        marker.addListener('click', function() {
+            
+            infoWindow.open(map, marker);
+        });
     }
   }
 

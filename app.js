@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '8fcbe0e9a5msh81ae43ac6117a00p1b32bejsn0cb661c27fa5',
+                'X-RapidAPI-Key': '9aa4fc57f3msh4a940688b572b19p1cb731jsn64b05df2b354',
                 'X-RapidAPI-Host': 'airbnb13.p.rapidapi.com'
             }
         };

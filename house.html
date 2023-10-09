@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <nav id="navBar" class="navbar-white">
-        <a href="index.html">
-            <img src="images/logo-red.png" class="logo">
-        </a>
-        
-        <ul class="nav-links">
-            <li><a href="#" class="active">Popular Places</a></li>
-            <li><a href="#">Travel Outside</a></li>
-            <li><a href="listing.html">Online Packages</a></li>
-        </ul>
-        <a href="#" class="register-btn">Register Now</a>
-        <i class="fas fa-bars" onclick="togglebtn()"></i>
+        <div class="image-div">
+            <img src="./images/Vector.png" alt="">
+        </div>
+        <div class="search-div2">
+            <input id="location" type="text" class="location2-input" placeholder="Start your search">
+            
+            <div class="search-img">
+                <img src="./images/search.png" alt="">
+            </div>
+        </div>
+        <div class="host-div">
+            <p>Beome a Host</p>
+            <img src="./images/globe.png" alt="">
+            <button class="menu-profile">
+                <img src="./images/menu.png" alt="">
+                <img src="./images/Avatar.png" alt="">
+
+            </button>
+        </div>
     </nav>
     <div class="house-details">
         <div class="house-title">
@@ -50,7 +59,7 @@
             
         </div>
         <div class="room-details">
-            <h2>treehouse, <span>India</span></h2>
+            <!-- <h2>treehouse, <span>India</span></h2>
             <div class="rooms">
                 <p>5 guests·</p>
                 <p>1 bedroom·</p>
@@ -59,7 +68,7 @@
             </div>
             <div class="des-rating">
                 <p class="stay-rating"><img src="./images/star.png" alt="">4.92 · <span>25 reviews</span></p>
-            </div>
+            </div> -->
             
         </div>
         <br>
@@ -84,20 +93,82 @@
             </div>
             <button type="submit">Check Availability</button>
         </form>
+        <div class="ul-card">
+            <ul class="details-list">
+                <li><i class="fas fa-home"></i>Entire Home
+                    <span>You will have the entire flat for you.</span>
+                </li>
+                <li><i class="fas fa-paint-brush"></i>Enhanced Clean
+                    <span>This host has committed to staybnb's cleaning process.</span>
+                </li>
+                <li><i class="fas fa-map-marker-alt"></i>Great Location
+                    <span>90% of recent guests gave the location a 5 star rating.</span>
+                </li>
+                <li><i class="fas fa-heart"></i>Great Check-in Experience
+                    <span>100% of recent guests gave the check-in process a 5 star rating.</span>
+                </li>
+            </ul>
 
-        <ul class="details-list">
-            <li><i class="fas fa-home"></i>Entire Home
-                <span>You will have the entire flat for you.</span>
-            </li>
-            <li><i class="fas fa-paint-brush"></i>Enhanced Clean
-                <span>This host has committed to staybnb's cleaning process.</span>
-            </li>
-            <li><i class="fas fa-map-marker-alt"></i>Great Location
-                <span>90% of recent guests gave the location a 5 star rating.</span>
-            </li>
-            <li><i class="fas fa-heart"></i>Great Check-in Experience
-                <span>100% of recent guests gave the check-in process a 5 star rating.</span>
-            </li>
+            <div class="five-night-rate">
+                <!-- <h2 class="one-night=rate">₹4000 <span class="night">night</span></h2>
+                <br>
+                <div class="date-table">
+                    <div class="cin-cout">
+                        <div class="c-in">
+                            <h5>CHECK IN</h5>
+                            <p>2/10/2023</p>
+                        </div>
+                        <div class="c-out">
+                            <h5>CHECK OUT</h5>
+                            <p>3/10/2023</p>
+                        </div>
+                    </div>
+                    <div class="guest-in">
+                        <h5>GUESTS</h5>
+                        <p>2 guests</p>
+                    </div>
+                </div>
+                <br>
+                <button class="reserve">Reserve</button>
+                <div class="charges">
+                    <br>
+                    <p class="not-charge">you won't be charged yet</p>
+                    <br>
+                    <div class="fees">
+                        <p>₹4000 x 5 nights</p>
+                        <p>₹20000</p>
+                    </div>
+                    <br>
+                    <div class="fees">
+                        <p>Cleaning fees</p>
+                        <p>₹355</p>
+                    </div>
+                    <br>
+                    <div class="fees">
+                        <p>Airbnb Service fees</p>
+                        <p>₹355</p>
+                    </div>
+                    <br>
+                </div>
+                <hr>
+                <br>
+                <div class="fees total-fees">
+                    <p>Total fees</p>
+                    <p>₹50000</p>
+                </div> -->
+
+            </div>
+
+        </div>
+
+        <hr class="line">
+        <ul class="details-list2">
+            <h1 class="offer">What this place offers</h1>
+            <br>
+            <!-- <li><i class="fas fa-home"></i>Entire Home</li>
+            <li><i class="fas fa-paint-brush"></i>Enhanced Clean</li>
+            <li><i class="fas fa-map-marker-alt"></i>Great Location</li>
+            <li><i class="fas fa-heart"></i>Great Check-in Experience</li> -->
         </ul>
 
         <hr class="line">
@@ -107,17 +178,17 @@
 
         <div class="map">
             <h3>Location on map</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21221.676224044128!2d-122.45917885570059!3d37.75203368896406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1641145357317!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            <b>San Francisco, California, United States</b>
+            <div id="mapi"></div>
+            <b class="address">San Francisco, California, United States</b>
             <p>It's like a home away from home.</p>
         </div>
 
         <hr class="line">
 
         <div class="host">
-            <img src="images/host.png">
+            <img class="host-image" src="images/host.png">
             <div>
-                <h2>Hosted by Brandon</h2>
+                <h2 class="host-name">Hosted by Brandon</h2>
                 <p><span>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -129,18 +200,64 @@
         </div>
         <a href="#" class="contact-host">Contact Host</a>
     </div>
-    <div class="container">
-        <div class="footer">
-            <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://youtube.com/"><i class="fab fa-youtube"></i></a>
-            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-            <hr>
-            <p>Copyright © 2021, Easy Tutorials.</p>
+    
+    <div class="footer">
+        <div class="ol-div">
+            <ol>
+                <li class="head">Support</li>
+                <li>Help Center</li>
+                <li>Safety information</li>
+                <li>Cancellation options</li>
+                <li>Our COVID-19 Response</li>
+                <li>Supporting people wiith disabilities</li>
+                <li>Report a neighborhood concern</li>
+            </ol>
+            <ol>
+                <li class="head">Community</li>
+                <li>Airbnb.org: disaster relief housing</li>
+                <li>Support: Afghan refugees</li>
+                <li>Celebrating diversity & belonging</li>
+                <li>Combating discriminatino</li>
+            </ol>
+            <ol>
+                <li class="head">Hosting</li>
+                <li>Try hosting</li>
+                <li>AirCover: protection for Hosts</li>
+                <li>Explore hosting resources</li>
+                <li>Visit our community forum</li>
+                <li>How to host responsibly</li>
+            </ol>
+            <ol>
+                <li class="head">About</li>
+                <li>Newsroom</li>
+                <li>Learn about new features</li>
+                <li>Letter from our founders</li>
+                <li>Careers</li>
+                <li>Airbnb Luxe</li>
+            </ol>
+
+        </div>
+        <br>
+        <div class="copy-right-div">
+            <div class="copy-right">
+                <a class="air">© 2022 Airbnb, Inc.</a>
+                <a class="a" href="#">Privacy</a>
+                <a class="a" href="#">Terms</a>
+                <a class="a" href="#">Setmap</a>
+            </div>
+           
+            <div class="footer2">
+                <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://youtube.com/"><i class="fab fa-youtube"></i></a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                
+            </div>
+            
         </div>
     </div>
-    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW-XUBI_NIhMo45mnhjxqq8-O-Xo0Lfuw&libraries=places&callback=initMap" type="text/javascript" async defer></script>
 <script src="house.js"></script>
 </body>
 </html>

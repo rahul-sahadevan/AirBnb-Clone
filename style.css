@@ -616,11 +616,16 @@ nav.navbar-white .fa-bars{
 .guest-field{
     flex: 1;
 }
-.details-list{
+.details-list,.details-list2{
     list-style: none;
     margin: 50px 0;
 }
-.details-list li{
+.footer2{
+    display: flex;
+    align-items: flex-start;
+}
+
+.details-list li,.details-list2 li{
     margin-left: 50px;
     font-size: 20px;
     font-weight: 500;
@@ -633,7 +638,7 @@ nav.navbar-white .fa-bars{
     font-weight: 400;
     font-size: 16px;
 }
-.details-list li i{
+.details-list li i,.details-list2 li i{
     position: absolute;
     top: 5px;
     left: -40px;
@@ -645,9 +650,10 @@ nav.navbar-white .fa-bars{
 .map{
     margin: 50px 0;
 }
-.map iframe{
+.map #mapi{
     width: 100%;
     margin-bottom: 30px;
+    height: 550px;
 }
 .map h3{
     font-size: 26px;
@@ -696,10 +702,95 @@ nav.navbar-white .fa-bars{
 .stay-rating{
     font-weight: bold;
 }
+.search-div2{
+    display: flex;
+    height: 48px;
+    box-shadow: 0px 4px 6px 0px #1F29371A;
+    box-shadow: 0px 2px 4px 0px #1F29370F;
+    border-radius: 30px;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+    background-color: white;
+}
+.date-table{
+    border: 1px solid rgb(189, 184, 184);
+    border-radius: 10px;
+    /* padding: 10px; */
+}
+.cin-cout{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    border-bottom: 1px solid rgb(189, 184, 184);
+    padding: 5px;
+}
+.c-out,.c-in{
+    /* border-left: 1px solid black; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guest-in{
+    padding: 10px;
+    padding-left: 30px;
+}
+.reserve{
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #F83059;
+    color: white;
+    font-weight: 700;
+    align-self: center;
+    cursor: pointer;
+    transition: backgroundColor 0.5s ease-in;
+}
+
+.reserve:hover{
+    background: linear-gradient(to right,#DE3151,#F83059);
+}
+.fees{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.total-fees{
+    font-weight: 700;
+}
+.five-night-rate{
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    width: 400px;
+}
+.ul-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: sticky;
+    z-index: 50;
+}
+.not-charge{
+    text-align: center;
+}
+.night{
+    font-size: 18px;
+    font-weight: 100;
+}
 /* -----media query for house details page---------- */
 @media only screen and (max-width: 700px){
     .house-details{
         margin-top: 150px;
+    }
+    .ul-card{
+        flex-wrap: wrap;
+        align-items: center;
     }
     .row p{
         margin-top: 10px;
@@ -785,8 +876,10 @@ nav.navbar-white .fa-bars{
 .location2-input{
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    flex-grow: 1;
+   
 }
-.search-div img{
+.search-div img,.search-div2 img{
     background-color: #DE3151;
     border: none;
    border-radius: 50%;
@@ -795,7 +888,7 @@ nav.navbar-white .fa-bars{
    width: 32px;
     object-fit: contain;
 }
-.search-div input{
+.search-div input,.search-div2 input{
     padding: 12px;
     outline: none;
    border: none;
@@ -879,7 +972,7 @@ nav.navbar-white .fa-bars{
    
 }
 .listing-card{
-    height: 450px;
+    height: 480px;
     width: 100%;
     line-height: 25px;
     border-radius: 15px;
@@ -914,6 +1007,17 @@ nav.navbar-white .fa-bars{
     position: sticky;
     top: 0;
 }
+.custom-marker {
+    background-color: red;
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
 /* .google-map-div img{
     object-fit: cover;
     width: 100%;
@@ -947,14 +1051,13 @@ nav.navbar-white .fa-bars{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    display: flex;
-    justify-content: space-between;
+ 
 }
 .copy-right{
     font-size: 14px;
     display: flex;
     gap: 8px;
-    align-items: flex-end;
+    align-items: center;
     height: 48px;
     justify-content: center;
 }
@@ -1053,6 +1156,10 @@ nav.navbar-white .fa-bars{
     .hotel-lists{
         grid-template-columns: repeat(1, 1fr);
        
+    }
+    .copy-right-div{
+        flex-wrap: wrap;
+        align-items: flex-start;
     }
     .listing-card{
         height: 70%;
