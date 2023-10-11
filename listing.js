@@ -133,7 +133,7 @@ function addModal(list,element){
 }
 function myProfile(){
     const a = document.createElement("a");
-    a.href = "http://127.0.0.1:5500/house.html"
+    a.href = "house.html"
     a.target = "_blank";
     window.location = a;
 }

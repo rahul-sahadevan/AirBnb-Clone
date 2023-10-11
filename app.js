@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 localStorage.setItem("obj",JSON.stringify(obj));
                 const a = document.createElement("a");
-                a.href = "http://127.0.0.1:5500/listing.html"
+                a.href = "listing.html"
                 a.target = "_blank";
                 window.location = a;
             } 
